@@ -1,2 +1,2 @@
 import sys
-import numpy
+import numpy as ny
