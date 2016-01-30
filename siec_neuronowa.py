@@ -13,17 +13,17 @@ def nonline(x,deriv = False):
  1 - 0001;5 - 0101
  2 - 0010;6 - 0110
  3 - 0011;7 - 0111
- 4 - 0100;8 - 1000 
+ 4 - 0100;  
 '''
 X = ny.array([[0,0,0,0,0,0,0,1],
-              [0,0,0,1,1,1,1,0],
-              [0,1,1,0,0,1,1,0],
-              [1,0,1,0,1,0,1,0]])
+              [0,0,0,1,1,1,1,1],
+              [0,1,1,0,0,1,1,1],
+              [1,0,1,0,1,0,1,1]])
 
 
 #wyjscie
 
-output = input("Podaj cyfre od 1-8 ")
+output = input("Podaj cyfre od 1-7 ")
 output = int(output)
 
 if (output == 1):
@@ -40,8 +40,7 @@ elif (output == 6):
     y = ny.array([[0,1,1,0]]).T
 elif (output == 7):
     y = ny.array([[0,1,1,1]]).T
-elif (output == 8):
-    y = ny.array([[1,0,0,0]]).T
+
 
     
 ny.random.seed(1)
@@ -51,7 +50,7 @@ syn0 = 2*ny.random.random((8,1)) - 1
 for iter in range(10000):
 
     l0 = X
-    l1 = nonline(ny.dot(l0,syn0))
+    l1 = nonline(ny.,dot(l0,syn0))
 
     l1_error = y - l1
     l1_delta = l1_error * nonline(l1,True)
