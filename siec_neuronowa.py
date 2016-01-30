@@ -50,7 +50,7 @@ syn0 = 2*ny.random.random((8,1)) - 1
 for iter in range(10000):
 
     l0 = X
-    l1 = nonline(ny.,dot(l0,syn0))
+    l1 = nonline(ny.dot(l0,syn0))
 
     l1_error = y - l1
     l1_delta = l1_error * nonline(l1,True)
